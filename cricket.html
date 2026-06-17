@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Score Counter</title>
+    <style>
+        h1 {
+            font-size: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Cricket Score Counter</h1>
+
+    <button onclick="console.log('Total Runs:', runs, 'Balls:', balls);">
+        Show Total Runs
+    </button>
+
+    <br><br>
+
+    <button onclick="runs += 1; balls--; console.log('Runs:', runs, 'Balls:', balls);">
+        1 Run
+    </button>
+
+    <button onclick="runs += 4; balls--; console.log('Runs:', runs, 'Balls:', balls);">
+        4 Runs
+    </button>
+
+    <button onclick="runs += 6; balls--; console.log('Runs:', runs, 'Balls:', balls);">
+        6 Runs
+    </button>
+
+    <script>
+        let runs = 0;
+        let balls = 20;
+
+        console.log("Start Runs:", runs);
+        console.log("Balls:", balls);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket</title>
+    <style>
+        header {
+            display: none;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .body1 {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 50px;
+            height: 50px;
+            
+            margin-left: 40px;
+
+        }
+        .body1 button:hover{
+            background-color: #e61313;
+        }
+         .body1 button {
+            padding: 10px 20px;
+            margin: 8px;
+            font-size: 25px;
+            border-radius: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+        h1 {
+            font-size: 50px;
+            color: #dd1d0c;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+        #btn{
+            margin-left: 120px;
+            font-size: 25px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Cricket Score Counter</h1>
+
+    <button id="btn" onclick="console.log('Total Runs:', runs, '    Remaining Balls:', balls, '    Wickets:', wicket);">
+        Show Total Runs
+    </button>
+    <br> <br>
+
+    <div class="body1">
+        <button onclick="runs += 0; balls--; console.log('Runs:', runs,'/',wicket,'   Remaining Balls:', balls);">
+            Dot
+        </button>
+        <button onclick="runs += 1; balls;wide++; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            Wide
+        </button>
+        <button onclick="runs += 1; balls;noBall++; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            No Ball
+        </button>
+
+        <button onclick="runs += 1; balls--; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            1
+        </button>
+        <button onclick="runs += 2; balls--; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            2
+        </button>
+        <button onclick="runs += 3; balls--; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            3
+        </button>
+
+        <button onclick="runs += 4; balls--;boundary++; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            4
+        </button>
+
+        <button onclick="runs += 6; balls--;boundary++; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            6
+        </button>
+        <button onclick="runs += 0; balls--;wicket++; console.log('Runs:', runs,'/',wicket, '   Remaining Balls:', balls);">
+            Wicket
+        </button>
+        <button onclick="console.log('Wides:', wide);">
+            Wides
+        </button>
+        <button onclick="console.log('No Balls:', noBall);">
+            No Balls
+        </button>
+        <button onclick="console.log('Boundarys:', boundary);">
+            Boundarys
+        </button>
+         <button onclick="runs = 0; balls = 20; wicket = 0; wide = 0; noBall = 0; boundary = 0; console.log('Scores reset.');">
+            Reset
+        </button>
+
+    </div>
+
+    <script>
+        let runs = 0;
+        let balls = 20;
+        let wicket = 0;
+        let wide = 0;
+        let noBall = 0;
+        let boundary = 0;
+        let reset = 0;
+
+        console.log("Runs:", runs,'/', wicket);
+        console.log("Total Balls:", balls);
+    </script>
+    <div>
+        <h1>
+            
+    </div>
+
+</body>
+
+</html>
